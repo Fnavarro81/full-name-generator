@@ -24,13 +24,13 @@ public class FullNameApplication {
     }
     // Full Name Format Method
     public static String formatFullName(String firstName, String middleName, String lastName, String suffix) {
-        String fullName = firstName + " " + lastName;
+        String fullName = firstName.trim() + " " + lastName.trim();
 
         if (!middleName.isEmpty()) {
-            fullName = firstName + " " + middleName + " " + lastName;
+            fullName = firstName.trim() + " " + middleName.trim() + " " + lastName.trim();
         }
         if (!suffix.isEmpty()) {
-            fullName = fullName + "," + suffix;
+            fullName = fullName.trim() + ", " + suffix.trim();
         }
         return fullName;
     }
